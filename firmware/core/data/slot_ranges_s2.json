@@ -1,0 +1,373 @@
+{
+ "version": 1,
+ "unit": "ADC counts, 12 bit",
+ "source": "guided one-press-per-key log",
+ "keys": {
+  "0": {
+   "key": "LSHIFT",
+   "released": 3333,
+   "bottom": 2086,
+   "span": 1247
+  },
+  "1": {
+   "key": "I",
+   "released": 3191,
+   "bottom": 2099,
+   "span": 1092
+  },
+  "2": {
+   "key": "Q",
+   "released": 3243,
+   "bottom": 2116,
+   "span": 1127
+  },
+  "3": {
+   "key": "-",
+   "released": 3382,
+   "bottom": 2384,
+   "span": 998
+  },
+  "4": {
+   "key": "3",
+   "released": 3135,
+   "bottom": 2086,
+   "span": 1049
+  },
+  "5": {
+   "key": "LCTRL",
+   "released": 3316,
+   "bottom": 2014,
+   "span": 1302
+  },
+  "6": {
+   "key": "E",
+   "released": 3337,
+   "bottom": 2128,
+   "span": 1209
+  },
+  "7": {
+   "key": "V",
+   "released": 3215,
+   "bottom": 2161,
+   "span": 1054
+  },
+  "8": {
+   "key": "BACKSPACE",
+   "released": 3338,
+   "bottom": 2189,
+   "span": 1149
+  },
+  "9": {
+   "key": "J",
+   "released": 3332,
+   "bottom": 2142,
+   "span": 1190
+  },
+  "10": {
+   "key": "ENTER",
+   "released": 3314,
+   "bottom": 2238,
+   "span": 1076
+  },
+  "11": {
+   "key": ".",
+   "released": 3334,
+   "bottom": 2194,
+   "span": 1140
+  },
+  "12": {
+   "key": "L",
+   "released": 3255,
+   "bottom": 2033,
+   "span": 1222
+  },
+  "13": {
+   "key": "T",
+   "released": 3256,
+   "bottom": 2116,
+   "span": 1140
+  },
+  "14": {
+   "key": "FN",
+   "released": 3253,
+   "bottom": 2017,
+   "span": 1236
+  },
+  "16": {
+   "key": "Y",
+   "released": 3159,
+   "bottom": 1794,
+   "span": 1365
+  },
+  "18": {
+   "key": "ESC",
+   "released": 3227,
+   "bottom": 2105,
+   "span": 1122
+  },
+  "19": {
+   "key": "8",
+   "released": 3451,
+   "bottom": 2398,
+   "span": 1053
+  },
+  "21": {
+   "key": "O",
+   "released": 3295,
+   "bottom": 2082,
+   "span": 1213
+  },
+  "22": {
+   "key": "2",
+   "released": 3290,
+   "bottom": 2270,
+   "span": 1020
+  },
+  "23": {
+   "key": "LALT",
+   "released": 3282,
+   "bottom": 2176,
+   "span": 1106
+  },
+  "25": {
+   "key": "C",
+   "released": 3374,
+   "bottom": 2326,
+   "span": 1048
+  },
+  "26": {
+   "key": "=",
+   "released": 3228,
+   "bottom": 2228,
+   "span": 1000
+  },
+  "27": {
+   "key": "M",
+   "released": 3314,
+   "bottom": 2232,
+   "span": 1082
+  },
+  "28": {
+   "key": "RSHIFT",
+   "released": 3210,
+   "bottom": 1981,
+   "span": 1229
+  },
+  "29": {
+   "key": ",",
+   "released": 3347,
+   "bottom": 2240,
+   "span": 1107
+  },
+  "30": {
+   "key": "/",
+   "released": 3191,
+   "bottom": 2117,
+   "span": 1074
+  },
+  "31": {
+   "key": "5",
+   "released": 3373,
+   "bottom": 2296,
+   "span": 1077
+  },
+  "32": {
+   "key": "'",
+   "released": 3370,
+   "bottom": 2272,
+   "span": 1098
+  },
+  "34": {
+   "key": "G",
+   "released": 3281,
+   "bottom": 2171,
+   "span": 1110
+  },
+  "36": {
+   "key": "CAPS",
+   "released": 3410,
+   "bottom": 2157,
+   "span": 1253
+  },
+  "37": {
+   "key": "U",
+   "released": 3284,
+   "bottom": 2070,
+   "span": 1214
+  },
+  "38": {
+   "key": "Z",
+   "released": 3220,
+   "bottom": 2047,
+   "span": 1173
+  },
+  "39": {
+   "key": "P",
+   "released": 3230,
+   "bottom": 2039,
+   "span": 1191
+  },
+  "42": {
+   "key": "R",
+   "released": 3338,
+   "bottom": 2199,
+   "span": 1139
+  },
+  "43": {
+   "key": "X",
+   "released": 3289,
+   "bottom": 2202,
+   "span": 1087
+  },
+  "44": {
+   "key": "]",
+   "released": 3262,
+   "bottom": 2199,
+   "span": 1063
+  },
+  "45": {
+   "key": "N",
+   "released": 3334,
+   "bottom": 2192,
+   "span": 1142
+  },
+  "47": {
+   "key": "K",
+   "released": 3358,
+   "bottom": 2212,
+   "span": 1146
+  },
+  "48": {
+   "key": ";",
+   "released": 3417,
+   "bottom": 2274,
+   "span": 1143
+  },
+  "49": {
+   "key": "F",
+   "released": 3450,
+   "bottom": 2345,
+   "span": 1105
+  },
+  "52": {
+   "key": "H",
+   "released": 3171,
+   "bottom": 1920,
+   "span": 1251
+  },
+  "54": {
+   "key": "TAB",
+   "released": 3102,
+   "bottom": 1834,
+   "span": 1268
+  },
+  "55": {
+   "key": "9",
+   "released": 3196,
+   "bottom": 2142,
+   "span": 1054
+  },
+  "56": {
+   "key": "1",
+   "released": 3216,
+   "bottom": 2182,
+   "span": 1034
+  },
+  "57": {
+   "key": "0",
+   "released": 3282,
+   "bottom": 2262,
+   "span": 1020
+  },
+  "59": {
+   "key": "LWIN",
+   "released": 3122,
+   "bottom": 1823,
+   "span": 1299
+  },
+  "60": {
+   "key": "4",
+   "released": 3359,
+   "bottom": 2303,
+   "span": 1056
+  },
+  "61": {
+   "key": "B",
+   "released": 3290,
+   "bottom": 2190,
+   "span": 1100
+  },
+  "62": {
+   "key": "[",
+   "released": 3403,
+   "bottom": 2321,
+   "span": 1082
+  },
+  "63": {
+   "key": "SPACE",
+   "released": 3220,
+   "bottom": 2044,
+   "span": 1176
+  },
+  "64": {
+   "key": "\\",
+   "released": 3154,
+   "bottom": 1920,
+   "span": 1234
+  },
+  "65": {
+   "key": "RALT",
+   "released": 3437,
+   "bottom": 2361,
+   "span": 1076
+  },
+  "66": {
+   "key": "RWIN",
+   "released": 3214,
+   "bottom": 2123,
+   "span": 1091
+  },
+  "67": {
+   "key": "6",
+   "released": 3338,
+   "bottom": 2137,
+   "span": 1201
+  },
+  "68": {
+   "key": "RCTRL",
+   "released": 3220,
+   "bottom": 2020,
+   "span": 1200
+  },
+  "70": {
+   "key": "7",
+   "released": 3170,
+   "bottom": 1946,
+   "span": 1224
+  },
+  "72": {
+   "key": "S",
+   "released": 3191,
+   "bottom": 2020,
+   "span": 1171
+  },
+  "73": {
+   "key": "A",
+   "released": 3355,
+   "bottom": 2178,
+   "span": 1177
+  },
+  "74": {
+   "key": "D",
+   "released": 3362,
+   "bottom": 2228,
+   "span": 1134
+  },
+  "75": {
+   "key": "W",
+   "released": 3210,
+   "bottom": 2038,
+   "span": 1172
+  }
+ }
+}

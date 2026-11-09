@@ -1,0 +1,20 @@
+open-magger60
+Copyright 2026 yaya
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It is an independent, unofficial project. It is not affiliated with, endorsed by,
+or sponsored by the manufacturer of the keyboard it targets. Product and company
+names are used only to identify compatible hardware; see DISCLAIMER.md.
+
+No vendor firmware, vendor software or vendor-derived data is part of this
+distribution.
+
+Third-party code: none. The firmware, the host tools and the configurator (ui/) use
+only the C and Python standard libraries and the browser's built-in APIs; nothing is
+loaded from a CDN or bundled from another project. The optional host tools import
+the third-party Python package "hidapi" at run time to talk to a keyboard; it has its own
+license, is installed by you with pip and is not included in this distribution.
+
+Hardware facts (register addresses, flash layout, bootloader behaviour) are facts about
+the device and are not subject to this copyright notice.

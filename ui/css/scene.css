@@ -1,0 +1,49 @@
+/* Lights page, round 2: tabs, per-key colour editor, gradients, indicator rules, scene state. Uses the tokens, so light and dark both work. */
+.led-tabs { display: grid; gap: var(--s3); }
+.led-tablist { flex-wrap: wrap; }
+.led-tablist button[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); box-shadow: none; }
+.led-tablist button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.led-tabpanel[hidden] { display: none; }
+.led-tabpanel:focus-visible { outline: none; }
+
+.scene-sec { display: grid; gap: var(--s4); }
+.btn-row.tight { margin-top: 0; }
+.scene-shades.warn { color: var(--warn); }
+.scene-gradient { border: 1px solid var(--line); border-radius: var(--r-md); padding: var(--s3) var(--s4); }
+.scene-gradient > summary { cursor: pointer; font-weight: 600; font-size: 0.9rem; }
+.scene-gradient[open] > summary { margin-bottom: var(--s3); }
+.scene-gradient .led-fields { margin-top: 0; }
+
+.g-bar { height: 0.9rem; border-radius: 999px; border: 1px solid var(--line-strong); }
+.g-stops { display: grid; gap: var(--s2); }
+.g-stop { display: flex; align-items: center; gap: var(--s3); }
+.g-stop input[type="color"], .rule input[type="color"], .scene-sec input[type="color"]:not(.swatch input) { width: 2.6rem; height: 2.2rem; padding: 0; border: 1px solid var(--line-strong); border-radius: var(--r-sm); background: var(--surface); cursor: pointer; }
+.g-stops[hidden], .g-bar[hidden] { display: none; }
+
+.rule-list { display: grid; gap: var(--s3); }
+.rule, .rule-inputs { border: 1px solid var(--line-strong); border-radius: var(--r-md); padding: var(--s3) var(--s4); margin: 0; min-width: 0; }
+.rule legend, .rule-inputs legend { padding: 0 var(--s2); font-size: 0.88rem; }
+.rule-grid { display: grid; gap: var(--s3) var(--s4); grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin-bottom: var(--s3); }
+.rule-grid .field select { width: 100%; }
+.rule-grid [hidden] { display: none; }
+.rule-sim { display: flex; flex-wrap: wrap; gap: var(--s3) var(--s5); margin-top: var(--s3); }
+.rule-warn { color: var(--warn); }
+.rule-warn:empty { display: none; }
+
+.scene-card .card-sub { max-width: 100%; }
+.scene-state[data-save="saving"] svg { animation: pulse 1s ease-in-out infinite; }
+.scene-help { padding: var(--s4); }
+.scene-help > summary { cursor: pointer; font-weight: 600; font-size: 0.92rem; }
+.scene-layers { margin: var(--s3) 0; padding-left: 1.2rem; display: grid; gap: var(--s2); font-size: 0.86rem; color: var(--text-dim); }
+.scene-layers strong { color: var(--text); }
+
+/* while editing the scene the preview shows the row / column tabs and the selection ring (the effect tab hides them) */
+.led-preview.editing .kb-svg .kb-tabs { display: initial; }
+.led-preview.editing .kb-svg.mode-lighting .key.sel .ring { stroke: var(--text); stroke-width: 3; }
+.led-preview.editing .kb-svg.mode-lighting .key.sel .cap { stroke: var(--text); stroke-width: 2; }
+
+@media (max-width: 719px) {
+  .led-tablist button { padding-inline: 0.55rem; font-size: 0.82rem; }
+  .rule-grid { grid-template-columns: minmax(0, 1fr); }
+  .g-stop { flex-wrap: wrap; }
+}

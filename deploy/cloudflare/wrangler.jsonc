@@ -1,0 +1,23 @@
+// Fluxline configurator on Cloudflare Workers (static assets only, no Worker script).
+// No account id and no secrets belong in this file. See README.md (zh-TW).
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Not a secret: the random suffix only keeps the name from being guessed (defence in depth; Cloudflare Access is the lock).
+  "name": "fluxline-f35d8745",
+  "compatibility_date": "2026-10-23",
+
+  // deploy.mjs copies the files the browser needs from ../../ui into ./dist (tests, README, serve.py stay out) and adds ./dist/_headers.
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  },
+
+  // PUBLIC BY THE OWNER'S CHOICE: reachable at https://<name>.<your-subdomain>.workers.dev, no login. The page is only static
+  // files; it talks to a keyboard only after the visitor presses "connect" in their own browser. Settings stay in that browser.
+  //   false = the Worker has no public address at all (the closed state).
+  // To restrict it to yourself later: README.md, section "想再鎖起來" (Cloudflare Access); this stays true.
+  "workers_dev": true,
+  // Version / preview URLs would be extra public addresses; keep them off.
+  "preview_urls": false
+}

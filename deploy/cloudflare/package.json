@@ -1,0 +1,12 @@
+{
+  "name": "fluxline-deploy",
+  "private": true,
+  "description": "Cloudflare Workers static-assets deployment of the configurator UI",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dry-run": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^4.155.0"
+  }
+}

@@ -1,0 +1,92 @@
+# Continuous integration: host tests, ARM builds, tool self-tests and UI tests.
+# Nothing here touches a keyboard, and no firmware image is uploaded as an artifact on purpose:
+# images are only ever flashed by hand, with the safety steps in README.md.
+#
+# Everything below runs from a clean checkout: no vendor files, no keyboard, no network access besides package installs.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  host-tests:
+    name: Host tests (gcc)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install compiler
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends gcc
+      - name: Unit tests
+        run: python firmware/tools/run_tests.py
+
+  arm-build:
+    name: ARM images (arm-none-eabi-gcc)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends gcc-arm-none-eabi libnewlib-arm-none-eabi cmake ninja-build
+          arm-none-eabi-gcc --version | head -n 1
+      - name: Configure
+        run: >
+          cmake -S firmware -B build-arm -G Ninja
+          -DCMAKE_TOOLCHAIN_FILE=firmware/cmake/arm-none-eabi.cmake
+          -DCMAKE_BUILD_TYPE=MinSizeRel
+      - name: Build images
+        run: |
+          targets="km_s3.elf km_k1.elf km_k3.elf km_l31.elf km_l33.elf"
+          echo "building: $targets"
+          cmake --build build-arm --target $targets
+          echo "$targets" > build-arm/ci_targets.txt
+      - name: Check images against the memory map
+        run: |
+          for elf in $(cat build-arm/ci_targets.txt); do
+            name="${elf%.elf}"
+            python firmware/tools/check_image.py "build-arm/$name.bin" "build-arm/$name.elf"
+          done
+
+  tool-selftests:
+    name: Host tool self-tests (simulated keyboards)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      # These need no files outside the repository.
+      - name: All host tools against their simulated keyboards
+        run: python tools/run_tool_selftests.py
+
+  ui-tests:
+    name: Configurator tests (node)
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: ui
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      # package.json has no dependencies, so there is nothing to install.
+      - name: Tests
+        run: npm test

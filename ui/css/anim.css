@@ -1,0 +1,23 @@
+/* Animation page (UI round 3): transport buttons, status banner, check rows. Colours come from tokens.css only. */
+.anim-now { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s3); }
+.anim-time { color: var(--text-dim); font-variant-numeric: tabular-nums; }
+.anim-transport { display: flex; gap: var(--s3); }
+.btn.big { min-height: 3rem; padding: 0 var(--s5); font-size: 1rem; flex: 1; }
+.btn.big[hidden] { display: none; }
+.anim-timeline[hidden] { display: none; }
+.anim-pick { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s3); }
+.anim-load { min-height: 1.3em; }
+.anim-kbrow { display: flex; flex-wrap: wrap; gap: var(--s3); }
+.anim-kbrow:empty { display: none; }
+.check { display: flex; align-items: center; flex-wrap: wrap; gap: var(--s2); cursor: pointer; }
+.check input { width: 1.15rem; height: 1.15rem; accent-color: var(--accent); }
+.check.big { font-size: 1.05rem; font-weight: 600; gap: var(--s3); }
+.check.big input { width: 1.5rem; height: 1.5rem; }
+.swatch.none { display: grid; place-items: center; background: var(--surface-2); color: var(--text-dim); }
+.swatch.none svg { width: 1.2rem; height: 1.2rem; }
+.anim-stream[data-mode="live"] { border-color: var(--accent-line); }
+
+.anim-bar { width: 100%; height: 0.7rem; accent-color: var(--accent); }
+.anim-bar[hidden] { display: none; }
+.anim-local[hidden] { display: none; }
+.anim-sound { display: flex; align-items: center; flex-wrap: wrap; gap: var(--s3); }

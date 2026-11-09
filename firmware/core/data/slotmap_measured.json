@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "source": "measured on the real keyboard, one press per key",
+ "rows_pressed_right_to_left": [
+  3,
+  5
+ ],
+ "slots": {
+  "0": "LSHIFT",
+  "1": "I",
+  "2": "Q",
+  "3": "-",
+  "4": "3",
+  "5": "LCTRL",
+  "6": "E",
+  "7": "V",
+  "8": "BACKSPACE",
+  "9": "J",
+  "10": "ENTER",
+  "11": ".",
+  "12": "L",
+  "13": "T",
+  "14": "FN",
+  "16": "Y",
+  "18": "ESC",
+  "19": "8",
+  "21": "O",
+  "22": "2",
+  "23": "LALT",
+  "25": "C",
+  "26": "=",
+  "27": "M",
+  "28": "RSHIFT",
+  "29": ",",
+  "30": "/",
+  "31": "5",
+  "32": "'",
+  "34": "G",
+  "36": "CAPS",
+  "37": "U",
+  "38": "Z",
+  "39": "P",
+  "42": "R",
+  "43": "X",
+  "44": "]",
+  "45": "N",
+  "47": "K",
+  "48": ";",
+  "49": "F",
+  "52": "H",
+  "54": "TAB",
+  "55": "9",
+  "56": "1",
+  "57": "0",
+  "59": "LWIN",
+  "60": "4",
+  "61": "B",
+  "62": "[",
+  "63": "SPACE",
+  "64": "\\",
+  "65": "RALT",
+  "66": "RWIN",
+  "67": "6",
+  "68": "RCTRL",
+  "70": "7",
+  "72": "S",
+  "73": "A",
+  "74": "D",
+  "75": "W"
+ },
+ "no_key_slots": {
+  "15": {
+   "idle": 3256,
+   "kind": "mirror of the ADC4 channel sampled three times"
+  },
+  "17": {
+   "idle": 3256,
+   "kind": "mirror of the ADC4 channel sampled three times"
+  },
+  "20": {
+   "idle": 1358,
+   "kind": "no sensor (floating input)"
+  },
+  "24": {
+   "idle": 1366,
+   "kind": "no sensor (floating input)"
+  },
+  "33": {
+   "idle": 3373,
+   "kind": "mirror of the ADC4 channel sampled three times"
+  },
+  "35": {
+   "idle": 3373,
+   "kind": "mirror of the ADC4 channel sampled three times"
+  },
+  "40": {
+   "idle": 1367,
+   "kind": "no sensor (floating input)"
+  },
+  "41": {
+   "idle": 1352,
+   "kind": "no sensor (floating input)"
+  },
+  "46": {
+   "idle": 1359,
+   "kind": "no sensor (floating input)"
+  },
+  "50": {
+   "idle": 1358,
+   "kind": "no sensor (floating input)"
+  },
+  "51": {
+   "idle": 3451,
+   "kind": "mirror of the ADC4 channel sampled three times"
+  },
+  "53": {
+   "idle": 3450,
+   "kind": "mirror of the ADC4 channel sampled three times"
+  },
+  "58": {
+   "idle": 1367,
+   "kind": "no sensor (floating input)"
+  },
+  "69": {
+   "idle": 3338,
+   "kind": "mirror of the ADC4 channel sampled three times"
+  },
+  "71": {
+   "idle": 3338,
+   "kind": "mirror of the ADC4 channel sampled three times"
+  }
+ }
+}

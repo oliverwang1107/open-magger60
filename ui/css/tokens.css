@@ -1,0 +1,81 @@
+/* Design tokens. Dark is the default; light via [data-theme="light"]. One accent, everything else neutral. */
+:root {
+  color-scheme: dark;
+
+  --bg: #090b0e;
+  --bg-rail: #0d1013;
+  --surface: #12161b;
+  --surface-2: #181d24;
+  --surface-3: #202630;
+  --line: #232a33;
+  --line-strong: #323b47;
+  --text: #e9edf2;
+  --text-dim: #a0aab8;
+  --text-faint: #6d7886;
+
+  --accent: #4de3c0;
+  --accent-strong: #7ff0d6;
+  --accent-ink: #04211b;
+  --accent-soft: rgb(77 227 192 / 0.13);
+  --accent-line: rgb(77 227 192 / 0.45);
+  --warn: #f4b64a;
+  --warn-soft: rgb(244 182 74 / 0.13);
+  --danger: #ff7272;
+  --danger-soft: rgb(255 114 114 / 0.13);
+
+  --key-bg: #1b2028;
+  --key-edge: #2b333e;
+  --key-text: #c9d1dc;
+  --key-text-dim: #7b8695;
+  --shadow: 0 1px 0 rgb(255 255 255 / 0.03) inset, 0 12px 32px -16px rgb(0 0 0 / 0.7);
+
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, "Liberation Mono", monospace;
+
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 0.75rem;
+  --s4: 1rem;
+  --s5: 1.5rem;
+  --s6: 2rem;
+  --gutter: 16px;
+  --r-sm: 0.5rem;
+  --r-md: 0.75rem;
+  --r-lg: 1rem;
+  --rail-w: 13.5rem;
+  --topbar-h: 3.5rem;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 160ms;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f3f5f8;
+  --bg-rail: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f1f4f8;
+  --surface-3: #e6ebf1;
+  --line: #dde3ea;
+  --line-strong: #c6cfda;
+  --text: #10151b;
+  --text-dim: #4b5666;
+  --text-faint: #7b8696;
+  --accent: #0b9f84;
+  --accent-strong: #067a65;
+  --accent-ink: #ffffff;
+  --accent-soft: rgb(11 159 132 / 0.11);
+  --accent-line: rgb(11 159 132 / 0.5);
+  --warn: #b7791f;
+  --warn-soft: rgb(183 121 31 / 0.12);
+  --danger: #d33f3f;
+  --danger-soft: rgb(211 63 63 / 0.1);
+  --key-bg: #f7f9fb;
+  --key-edge: #cdd5df;
+  --key-text: #1c242e;
+  --key-text-dim: #7b8696;
+  --shadow: 0 1px 0 rgb(255 255 255 / 0.8) inset, 0 10px 28px -18px rgb(30 45 70 / 0.35);
+}
+
+@media (min-width: 1100px) { :root { --rail-w: 14rem; } }
+@media (max-width: 1099px) { :root { --rail-w: 4.5rem; } }
+@media (max-width: 719px) { :root { --rail-w: 0rem; --topbar-h: 3.25rem; } }

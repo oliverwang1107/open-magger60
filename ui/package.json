@@ -1,0 +1,7 @@
+{
+  "name": "magger60-ui",
+  "private": true,
+  "type": "module",
+  "description": "Magger60 configurator (static, build-less). Tests: node --test",
+  "scripts": { "test": "node --test" }
+}

@@ -1,0 +1,19 @@
+/* Navigation with eight pages, the connect button in the top bar, the connection sentence, and the "saved on the keyboard" box. */
+.banner.ok { background: var(--accent-soft); border-color: transparent; }
+.banner.ok svg { color: var(--accent); }
+.led-save[data-save="saving"] svg { animation: pulse 1s ease-in-out infinite; }
+.led-idle-note { margin-top: var(--s2); }
+.field select { min-height: 2.4rem; max-width: 100%; padding: 0 0.7rem; border-radius: var(--r-md); border: 1px solid var(--line-strong); background: var(--surface); color: var(--text); font: inherit; }
+.field select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top-connect[hidden] { display: none; }
+.conn-line { margin: 0; }
+.conn-line[data-state="failed"] { color: var(--danger); }
+
+@media (max-width: 719px) {
+  /* eight pages do not fit side by side on a phone: the bar scrolls sideways and keeps the current page in view */
+  .nav-list { overflow-x: auto; justify-content: flex-start; scroll-snap-type: x proximity; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .nav-list::-webkit-scrollbar { display: none; }
+  .nav-list li { flex: 1 0 auto; scroll-snap-align: center; }
+  .nav-item { min-width: 3.6rem; }
+  .top-connect { font-size: 0.78rem; padding: 0 0.6rem; }
+}
